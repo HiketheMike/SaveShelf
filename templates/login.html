@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Đăng nhập cửa hàng – SaveShelf{% endblock %}
+{% block content %}
+<div class="card" style="max-width:420px;margin:30px auto">
+  <h2 style="margin-top:0">Đăng nhập cửa hàng</h2>
+  <p class="muted">Đăng sản phẩm cận date và giảm giá để tiếp cận người mua quanh khu vực của bạn.</p>
+  <form method="post">
+    <label for="email">Email</label><input id="email" name="email" type="email" required>
+    <label for="password">Mật khẩu</label><input id="password" name="password" type="password" required>
+    <p><button class="btn" style="width:100%">Đăng nhập</button></p>
+  </form>
+  <p class="muted">Chưa có tài khoản? <a href="{{ url_for('store_register') }}">Đăng ký cửa hàng</a></p>
+  <p class="muted">Tài khoản demo: <code>hoasua@demo.vn</code> / <code>123456</code></p>
+</div>
+{% endblock %}
